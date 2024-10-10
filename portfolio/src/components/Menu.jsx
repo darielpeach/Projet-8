@@ -101,4 +101,4 @@ function MenuBar() {
     );
 }
 
-export default MenuBar;
+export default MenuBar
