@@ -1,0 +1,55 @@
+@media (max-width: 768px) {
+    /* Media queries pour le texte bannière */
+    .txtBanner {
+        top: 25%;
+        font-size: 30px;
+    }
+    
+    /* Media Queries pour le menu */
+    .menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #f0f0f0;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        justify-content: flex-start;
+        padding-top: 20px;
+        display: none; 
+    }
+
+    .menu-list.open {
+        display: flex;
+    }
+
+    .menu ul li {
+        margin: 10px 0;
+    }
+
+    .menu ul li a {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: flex; 
+    }
+
+/* Media Queries partie Compétences */
+    .sectionCompetences div {
+        flex-direction: column;  
+        align-items: center;     
+    }
+
+    .sectionCompetences div > div {
+        width: 80%;  
+    }
+
+/* Media Queries partie Projets */
+    .projets-container {
+        grid-template-columns: 1fr; 
+    }
+
+}

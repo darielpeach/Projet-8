@@ -1,0 +1,298 @@
+.card {
+    display: flex;
+    flex-direction: row-reverse;
+    
+    margin-top: 40px;
+}
+
+.card p {
+    padding-right: 50px;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.txtBanner {
+    position: absolute;
+    top: 40%;
+    right: 24%;
+    color: white;
+    font-size: 40px;
+}
+
+
+.imgBanner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+    
+}
+
+/* Menu */
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    z-index: 1000;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    margin: 0;
+}
+
+.menu ul li {
+    margin-right: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+
+.menu ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    background-color: #007bff;
+    z-index: -1;
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translate(-50%);
+    border-radius: 10px;
+}
+
+.menu ul li a:hover::before {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu ul li a:hover {
+    color: white;
+}
+
+
+.menu ul li a.active {
+    color: orange;
+}
+
+/* CSS pour le bouton hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    z-index: 1501;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: orange;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+
+/* CSS Section presentation */
+.sectionPresentation {
+    display: flex;               
+    flex-direction: column;       
+    align-items: center;          
+    text-align: center;           
+    padding: 20px;                
+}
+
+.sectionPresentation h2 {
+    font-size: 2em;               
+    margin-bottom: 10px;          
+}
+
+.sectionPresentation p {
+    margin: 15px 0;                
+    line-height: 1.5;             
+}
+
+/* CSS section  "Mes compétences" */
+.sectionCompetences {
+    padding: 20px;
+}
+
+
+.sectionTitre {
+    background-color: #007BFF;   
+    color: white;                
+    text-align: center;          
+    padding: 15px;               
+    border-radius: 5px;          
+    margin-bottom: 20px;         
+}
+
+
+.sectionCompetences div {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 20px;
+}
+
+
+.sectionCompetences div > div {
+    display: flex;
+    flex-direction: column;      
+    align-items: center;         
+    width: 30%;                  
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    background-color: #f9f9f9;   
+    border-radius: 10px;         
+}
+
+
+.sectionCompetences div img {
+    width: 100px;  
+    height: auto;  
+    margin-bottom: 10px; 
+}
+
+
+.sectionCompetences div h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+
+.sectionCompetences div p {
+    margin: 5px 0;
+    text-align: center; 
+}
+
+
+/* CSS pour la section Projets */
+.sectionProjets {
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+
+.projets-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+}
+
+
+.projet-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: black; 
+}
+
+
+.projet-card img {
+    width: 150px; 
+    height: auto;
+    margin-bottom: 15px;
+}
+
+
+.projet-card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.projet-card h4 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.projet-card p {
+    margin: 5px 0;
+}
+
+/* CSS pour la section Contact */
+.sectionContact {
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+.sectionContact form {
+    max-width: 500px;
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+}
+
+.sectionContact label {
+    text-align: left;
+    font-weight: bold;
+}
+
+.sectionContact input[type="text"],
+.sectionContact input[type="email"],
+.sectionContact textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.sectionContact textarea {
+    resize: vertical; 
+    height: 150px;
+}
+
+.sectionContact input[type="submit"] {
+    background-color: #007bff; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto; 
+    margin: 0 auto; 
+    display: block; 
+    font-weight: bold;
+}
+
+
+.sectionContact input[type="submit"]:hover {
+    background-color: #0056b3; 
+}
